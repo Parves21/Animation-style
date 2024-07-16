@@ -1,0 +1,49 @@
+#animation-css{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #011718;
+    height: 400px;
+    width: 300px;
+    position: relative;
+    left: 500px;
+    top: 100px;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+}
+
+.style-css{
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    z-index: 2;
+    background-color: #011845;
+    height: 390px;
+    width: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#animation-css::after{
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 140%;
+    background-image: linear-gradient(rgb(255, 8, 0), rgb(255, 0, 217)
+    );
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
