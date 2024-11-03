@@ -1,85 +1,171 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    background-color: rgb(13, 13, 13);
+    font-family: sans-serif;
 }
 
-div{
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-div h2 a{
-    text-decoration: none;
-    color: aliceblue;
-    font-weight: bold;
-    position: relative;
-
-}
-div h2 a::after{
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: rebeccapurple;
-
-}
-body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(13, 13, 13);
+.nav-child-1 a img {
+    height: 40px;
+    width: 100px;
 }
 
-div{
+.nav-child-2 {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
-div h2 a{
+.nav-child-2 h4 a {
     text-decoration: none;
-    color: aliceblue;
-    font-weight: bold;
+    font-weight: 900;
     position: relative;
-
-}
-div h2 a::after{
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: rebeccapurple;
-
-}
-body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(13, 13, 13);
 }
 
-div{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-div h2 a{
+.nav-child-2 button a {
     text-decoration: none;
-    color: aliceblue;
-    font-weight: bold;
-    position: relative;
-
+    font-weight: 900;
 }
-div h2 a::after{
+
+.nav-child-2 h4 a::after {
     content: '';
     position: absolute;
     height: 3px;
-    width: 0;
+    width: 0%;
     left: 0;
-    background-color: red;
-    transition: 0.5s;
+    background-image: linear-gradient(to right, red, yellow, blueViolet);
+    bottom: -10px;
 }
-div h2 a:hover::after{
+
+.nav-child-2 h4 a:hover::after {
     width: 100%;
+    transition: 0.3s;
+}
+
+.nav-child-2 button {
+    background-color: aliceblue;
+    padding: 10px 20px;
+    border: 2px solid #f4d01e;
+    border-radius: 8px;
+}
+
+.nav-child-2 button:hover {
+    box-shadow: 1px 1px 10px 5px #f4d01e;
+}
+
+.button-animation {
+    height: 50px;
+    width: 100px;
+    background-color: #1d2525;
+    border: none;
+    border-radius: 8px;
+    margin-left: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.animation-style {
+    height: 40px;
+    width: 90px;
+    background-color: cadetblue;
+    color: aliceblue;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 5px;
+    top: -7px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.button-animation::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right, red, blueViolet);
+    height: 30px;
+    width: 150%;
+    left: 0;
+    bottom: 10px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.box-animation {
+    height: 50px;
+    width: 120px;
+    background-color: #1d2525;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-animation h4 {
+    color: aliceblue;
+    font-size: small;
+    font-weight: 900;
+    z-index: 2;
+}
+
+.box-animation::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 140%;
+    background-image: linear-gradient(to right, red, blueViolet);
+    animation: rotate 4s linear infinite;
+}
+
+.box-animation::after {
+    content: '';
+    position: absolute;
+    background-color: cadetblue;
+    inset: 5px;
+    border-radius: 5px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+    nav {
+        margin-top: 10px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-child-2 {
+        justify-content: center;
+        gap: 20px;
+    }
 }
