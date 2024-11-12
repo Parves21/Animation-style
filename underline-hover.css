@@ -156,6 +156,32 @@ nav {
 }
 
 
+#animation-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.anime-section-child-1{
+    border: 1px solid tan;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    
+}
+.anime-section-child-2{
+    border: 1px solid tan;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 620px) {
     nav {
         margin-top: 10px;

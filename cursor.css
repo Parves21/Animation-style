@@ -1,3 +1,31 @@
+h1 {
+    font-weight: 900;
+    font-family: sans-serif;
+    color: rebeccapurple;
+}
+
+div h1 span {
+    color: red;
+    position: relative;
+}
+
+div h1 span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    border-left: 2px solid #06720f;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    animation: typing 4s steps(12) infinite;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+    }
+}
+
 /* *{
    margin: 0;
    padding: 0;
@@ -100,5 +128,60 @@ ul li:hover ~ .cursor {
 }
  */
 
+#another-typing-style {
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+}
 
- 
+#another-typing-style h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: x-large;
+    color: #06720f;
+}
+
+.dynamic-style {
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+}
+
+.dynamic-style li {
+    list-style: none;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: red;
+    font-size: x-large;
+    position: relative;
+    top: 0;
+    animation: uping 6s steps(4) infinite;
+}
+
+@keyframes uping {
+    100% {
+        top: -140px;
+    }
+}
+
+.dynamic-style li span {
+    position: relative;
+}
+
+.dynamic-style li span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid rgb(14, 24, 211);
+    background-color: white;
+    animation: lyping 1.5s steps(14) infinite;
+}
+
+@keyframes lyping {
+    100% {
+        left: 100%;
+    }
+}
